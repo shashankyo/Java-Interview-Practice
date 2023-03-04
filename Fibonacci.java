@@ -1,28 +1,23 @@
-package fibonacciSeriesofFirstNnumbers;
+package fibonacciSeries;
+
+import java.util.Scanner;
 
 public class Fibonacci {
-void fibonaci(int n)
-{
-	int num1 =0;
-	int num2 = 1;
-	if(n == 1)
+public static void main(String[] args) {
+	Scanner scan =  new Scanner(System.in);
+	System.out.println("Enter the number to find Fibbonacci series");
+	int count = scan.nextInt();
+//	int count = 10;
+	int[] fib = new int[count+1];
+	fib[0] = 0;
+	fib[1] = 1;
+	for(int i=2; i<=count;i++)
 	{
-		System.out.println(num1);
+		fib[i] = fib[i-1]+fib[i-2];
 	}
-	else if( n==2)
+	for(int i:fib)
 	{
-		System.out.print(num1 + " "+ num2);
-	}
-	else
-	{
-		System.out.print(num1+ " "+ num2+" ");
-	}
-	for(int i=3;i<=n;i++)
-	{
-		int fib = num1 + num2;
-		System.out.print(fib+ " ");
-		num1 = num2;
-		num2 = fib;
+		System.out.println(i);
 	}
 }
 }
