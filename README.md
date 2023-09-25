@@ -1,2 +1,2 @@
 # Java-Interview-Practice
-All Java interview solutions
+All Java interview solutions from all resources
